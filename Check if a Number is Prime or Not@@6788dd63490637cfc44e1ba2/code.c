@@ -5,11 +5,11 @@ int main() {
     scanf("%d", &num);
 
     if (num < 2) {
-        printf("No\n");  // 0 and 1 are not prime
+        printf("Not Prime\n");  // 0 and 1 are not prime
     } else if (num == 2 || num == 3) {
-        printf("It is a prime number\n");  // 2 and 3 are prime
+        printf("Prime\n");  // 2 and 3 are prime
     } else if (num % 2 == 0 || num % 3 == 0) {
-        printf("No\n");  // Eliminate multiples of 2 and 3 early
+        printf("Not Prime\n");  // Eliminate multiples of 2 and 3 early
     } else {
         for (int i = 5; i * i <= num; i += 6) {  // Check only 6k ± 1 numbers
             if (num % i == 0 || num % (i + 2) == 0) {
@@ -18,7 +18,7 @@ int main() {
             }
         }
         if (is_prime)
-            printf(" Prime\n");
+            printf("Prime\n");
         else
             printf("Not Prime\n");
     }
